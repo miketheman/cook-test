@@ -5,6 +5,9 @@ gem 'chef', '~> 10.12.0'
 
 group :development do
   gem 'travis-lint', '~> 1.4.0'
+  gem 'guard', '~> 1.3.2'
+  gem 'guard-foodcritic', '~> 1.0.0'
+  gem 'guard-rspec', '~> 1.2.1'
 end
 
 group :test do
