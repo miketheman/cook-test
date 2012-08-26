@@ -16,3 +16,9 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+# RVM
+.rvmrc
+
+# bundler
+Gemfile.lock
