@@ -1,21 +1,55 @@
 # Put files/directories that should be ignored in this file.
 # Lines that start with '# ' are comments.
 
-# gitignore
-\.gitignore
+## OS
+.DS_Store
+Icon?
+nohup.out
 
-# emacs
+## EDITORS
+\#*
+.#*
 *~
-
-# vim
 *.sw[a-z]
+*.bak
+REVISION
+TAGS*
+tmtags
+*_flymake.*
+*_flymake
+*.tmproj
+.project
+.settings
+mkmf.log
 
-# subversion
+## COMPILED
+a.out
+*.o
+*.pyc
+*.so
+
+## OTHER SCM
+*/.bzr/*
+*/.hg/*
 */.svn/*
 
-# tests
-*/test/*
-\.travis.yml
+## Don't send rspecs up in cookbook
+.watchr
+.rspec
+spec/*
+spec/fixtures/*
+features/*
 
-Rakefile
-Gemfile
+## SCM
+.gitignore
+
+# Berkshelf
+Berksfile
+Berksfile.lock
+cookbooks/*
+
+# Vagrant
+.vagrant
+
+# Travis
+.travis.yml

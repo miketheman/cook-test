@@ -10,4 +10,5 @@ end
 group :test do
   gem 'tailor', '~> 1.1.2'
   gem 'foodcritic', '~> 1.5.1'
+  gem 'berkshelf', '~> 0.4.0.rc4'
 end

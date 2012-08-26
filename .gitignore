@@ -22,3 +22,7 @@ doc/
 
 # bundler
 Gemfile.lock
+
+# berkshelf
+Berksfile.lock
+/cookbooks
