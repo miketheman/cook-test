@@ -22,3 +22,8 @@ end
 FoodCritic::Rake::LintTask.new do |t|
   t.options = {:fail_tags => ['correctness']}
 end
+
+desc "Install Berkshelf shims"
+task :berks do
+  sh %{berks install --shims}
+end
