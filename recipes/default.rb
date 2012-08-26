@@ -19,5 +19,5 @@ template "/etc/ntp.conf" do
   owner "root"
   group "root"
   mode "0644"
-  notifies :restart, resources(:service => node['ntp']['service'])
+  notifies :restart, resources(:service => "ntp")
 end

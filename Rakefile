@@ -5,7 +5,7 @@ require 'foodcritic'
 # https://github.com/turboladen/tailor
 require 'tailor/rake_task'
 
-task :default => [:tailor, :foodcritic, :knife]
+task :default => [:tailor, :foodcritic, :knife, :chefspec]
 
 Tailor::RakeTask.new do |task|
   task.file_set('attributes/**/*.rb', "attributes") do |style|
@@ -36,4 +36,10 @@ end
 desc "Test cookbooks via knife"
 task :knife do
   sh %{knife cookbook test -o cookbooks -a}
+end
+
+# https://github.com/acrmp/chefspec
+desc "Run ChefSpec Unit Tests"
+task :chefspec do
+  sh %{rspec cookbooks/cook-test}
 end
