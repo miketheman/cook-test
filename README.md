@@ -1,5 +1,6 @@
 cook-test
 =========
+[![Build Status](https://secure.travis-ci.org/miketheman/cook-test.png?branch=master)](http://travis-ci.org/miketheman/cook-test)
 
 This is a place to test cookbook testing integrations
 
