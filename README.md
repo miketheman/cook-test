@@ -19,21 +19,31 @@ Supplemental tools
 Flow
 ----
 
-1. Fork/clone repo
-1. Execute `bundle install`
-1. Execute `rake` to run all default tests
-1. Checkout a Feature branch, name it well! `git checkout -b <featurename>`
+* Fork/clone repo
+* Install development dependencies:
 
-1. Start guard to watch for changes on saves
+        bundle install
+* Download any dependencies, run all tests:
 
-1. Make changes
+        rake berks
+        rake
+* Start up `guard`:
 
-1. Test style with `rake tailor`
+        bundle exec guard start
+    `guard` will execute `foodcritic` and `chefspec` tests as files are saved.
+* Checkout a Feature branch, name it well!
 
-1. Commit, issue pull request
-1. Beer!
+        git checkout -b <featurename>
+* Make changes
+* Commit, issue pull request
+* Beer!
 
 
 Assumptions
 -----------
 Travis should not be checking style - that's part of development
+
+Running unit tests against any cookbook that has dependencies (which many do) requires those dependencies to be available at test run time.
+Since Guard will watch files for changes, this means that getting the dependencies in place is crucial.
+
+Berkshelf will place install shims into `./cookbooks` and then Guard will watch `<repo root>/cookbooks/<cookbook name>/[spec|any ruby file]`.
