@@ -13,6 +13,6 @@ end
 group :test do
   gem 'tailor', '~> 1.1.2'
   gem 'foodcritic', '~> 1.6.0'
-  gem 'berkshelf', '~> 0.4.0.rc4'
+  gem 'berkshelf', '~> 0.4.0'
   gem 'chefspec', '~> 0.6.1'
 end
