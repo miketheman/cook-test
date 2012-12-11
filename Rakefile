@@ -41,5 +41,5 @@ end
 # https://github.com/acrmp/chefspec
 desc "Run ChefSpec Unit Tests"
 task :chefspec do
-  sh %{rspec cookbooks/cook-test}
+  sh %{rspec --color cookbooks/cook-test}
 end

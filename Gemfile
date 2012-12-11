@@ -15,4 +15,5 @@ group :test do
   gem 'foodcritic', '~> 1.6'
   gem 'berkshelf', '~> 1.0'
   gem 'chefspec', '~> 0.9'
+  gem 'fauxhai'
 end
