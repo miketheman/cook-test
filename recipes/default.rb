@@ -18,10 +18,10 @@ service node['ntp']['service'] do
   action [:enable, :start]
 end
 
-template "/etc/ntp.conf" do
-  source "ntp.conf.erb"
-  owner "root"
-  group "root"
-  mode "0644"
+template '/etc/ntp.conf' do
+  source 'ntp.conf.erb'
+  owner 'root'
+  group 'root'
+  mode 00644
   notifies :restart, resources(:service => node['ntp']['service'])
 end
